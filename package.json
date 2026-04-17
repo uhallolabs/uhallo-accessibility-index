@@ -1,0 +1,39 @@
+{
+  "name": "uhallo-accessibility-index",
+  "version": "1.0.0",
+  "description": "Open methodology for task-based web accessibility measurement.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "uai": "./bin/uai.js"
+  },
+  "scripts": {
+    "start": "node ./bin/uai.js",
+    "postinstall": "npx playwright install chromium"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uhallolabs/uhallo-accessibility-index.git"
+  },
+  "keywords": [
+    "accessibility",
+    "a11y",
+    "wcag",
+    "playwright",
+    "audit",
+    "compliance",
+    "sebi",
+    "eaa",
+    "ada"
+  ],
+  "author": "Uhallo Labs",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/uhallolabs/uhallo-accessibility-index/issues"
+  },
+  "homepage": "https://github.com/uhallolabs/uhallo-accessibility-index#readme",
+  "dependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "playwright": "^1.48.0"
+  }
+}
