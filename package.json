@@ -1,14 +1,14 @@
 {
   "name": "uhallo-accessibility-index",
   "version": "1.0.0",
-  "description": "Open methodology for task-based web accessibility measurement.",
+  "description": "Task-based web accessibility measurement engine powering the Uhallo UAI score.",
   "type": "module",
   "main": "src/index.js",
   "bin": {
-    "uai": "./bin/uai.js"
+    "uhallo-accessibility-index": "./bin/cli.js"
   },
   "scripts": {
-    "start": "node ./bin/uai.js",
+    "start": "node ./bin/cli.js",
     "postinstall": "npx playwright install chromium"
   },
   "repository": {
@@ -17,17 +17,24 @@
   },
   "keywords": [
     "accessibility",
-    "a11y",
     "wcag",
-    "playwright",
+    "a11y",
     "audit",
-    "compliance",
-    "sebi",
-    "eaa",
-    "ada"
+    "lighthouse"
   ],
   "author": "Uhallo Labs",
-  "license": "Apache-2.0",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin",
+    "src",
+    "docs",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
   "bugs": {
     "url": "https://github.com/uhallolabs/uhallo-accessibility-index/issues"
   },

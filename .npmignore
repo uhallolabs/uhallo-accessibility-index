@@ -1,0 +1,6 @@
+tests/
+*.test.js
+.github/
+.git/
+examples/
+node_modules/

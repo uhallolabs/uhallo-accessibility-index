@@ -2,7 +2,9 @@
 
 **Open methodology for task-based web accessibility measurement.**
 
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+[![npm version](https://badge.fury.io/js/uhallo-accessibility-index.svg)](https://badge.fury.io/js/uhallo-accessibility-index)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/uhallolabs/uhallo-accessibility-index.svg?style=social&label=Star)](https://github.com/uhallolabs/uhallo-accessibility-index)
 [![WCAG](https://img.shields.io/badge/standard-WCAG%202.1%20AA-green.svg)](https://www.w3.org/WAI/WCAG21/quickref/)
 [![Regulations](https://img.shields.io/badge/mapped%20to-SEBI%20%7C%20EAA%20%7C%20ADA-orange.svg)](docs/METHODOLOGY.md)
 
@@ -15,6 +17,15 @@ npx uhallo-accessibility-index https://example.com
 ```
 
 This will launch a headless Chromium browser, simulate the 8 accessibility tasks, and print a color-coded structural breakdown directly to your terminal.
+
+```text
+Task Breakdown:
+────────────────────────────────────────────────────────────
+[PASS] Page Foundation (T0)
+[FAIL] Image Alt Quality (T6)
+       ╰─ 3 images missing descriptions
+       SCs: 1.1.1
+```
 
 ---
 
@@ -202,7 +213,7 @@ Issues and PRs are welcome. The methodology is intentionally versioned (current:
 
 ## See It Live
 
-- **Methodology docs:** [uhallo.com/methodology](https://uhallo.com/methodology)
+- **Methodology docs:** [uhallo.com/uai](https://uhallo.com/uai)
 - **Live rankings:** [uhallo.com/governance](https://uhallo.com/governance)
 - **Run a free scan:** [uhallo.com](https://uhallo.com)
 
@@ -210,4 +221,4 @@ Issues and PRs are welcome. The methodology is intentionally versioned (current:
 
 ## License
 
-Apache 2.0 — see [LICENSE](LICENSE)
+MIT — see [LICENSE](LICENSE)
