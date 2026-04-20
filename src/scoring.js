@@ -1,21 +1,6 @@
 /**
  * UAI Scoring Algorithm — v4 Journey Engine
- *
- * This file contains computeJourneyScore() and collectFailedSCs().
- * Extracted from the Uhallo Engine monorepo (shared/services/uai-scoring.js, lines 777-903).
- *
- * The v4 engine replaces the pillar-based compression curve (uai-scoring v1.2) with
- * a direct task-completion measurement across 3 role-typed pages.
- *
- * Dependencies:
- *   - task-runner.js (collectFailedSCs is imported from there in the monorepo,
- *     but is co-located here in this standalone extract for simplicity)
  */
-
-// â”€â”€â”€ V4 Journey Scoring â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-// Imported by scanner.js. Kept here so uai-scoring.js is the single scoring module.
-
-
 const PAGE_WEIGHTS = { home: 0.30, conversion: 0.40, form: 0.30 };
 const HIGH_WEIGHT_TASKS = new Set(['t1', 't3', 't4']);
 const WEAKEST_LINK_CAP  = 60;

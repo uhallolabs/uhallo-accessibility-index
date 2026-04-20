@@ -53,23 +53,23 @@ if (score.uai_score < 80) {
 
 ## What Is This
 
-The UAI is an accessibility scoring methodology that replaces static rule counts with **real browser simulations of human tasks**. Instead of counting ARIA violations and running them through a compression curve, it answers a direct question:
+Most accessibility scanners just count HTML violations and spit out a score. The UAI does something else: it spins up a real browser and tries to complete human tasks.
 
-> *Can a keyboard user or screen reader user actually complete the thing this page exists for?*
+Instead of asking "Are there ARIA errors?", it asks "Can a keyboard user actually check out?"
 
-This repository contains the complete scoring algorithm and all 8 task simulation files — the same code that powers production audits on [uhallo.com](https://uhallo.com).
+This repository contains the complete scoring algorithm and the 8 task simulations we use in production.
 
 ---
 
 ## How It Works
 
-A UAI audit simulates 8 tasks across 3 role-typed pages:
+A UAI audit simulates 8 tasks across 3 types of pages. We weight the score based on how critical the page is to the user's journey.
 
 | Page Type | Weight | Purpose |
 |-----------|--------|---------|
-| Home | 30% | Arrival + orientation — can a screen reader user find the main content? |
-| Conversion | 40% | Primary task — can a keyboard user reach and activate the core action? |
-| Form | 30% | Interaction + error recovery — are form errors announced to assistive tech? |
+| Home | 30% | Arrival — can a screen reader user find the main content without getting lost? |
+| Conversion | 40% | Primary task — can a keyboard user actually reach and activate the core action? |
+| Form | 30% | Interaction — if a user makes a mistake, does assistive tech tell them how to fix it? |
 
 Each page runs the applicable tasks from the suite below. The final UAI is a weighted completion rate.
 
@@ -195,19 +195,19 @@ Each task returns:
 
 ## About This Repository
 
-The UAI Standard is extracted from the [Uhallo Engine](https://uhallo.com) monorepo, where it powers production accessibility audits across hundreds of domains.
+This isn't a stripped-down open-source version. This is the exact code that powers production audits on [uhallo.com](https://uhallo.com).
 
-This public repository contains the complete scoring methodology and all 8 task simulation files — the same code that runs in production. We publish it separately so the methodology can be inspected, verified, and contributed to independently of the commercial platform.
+We pulled the scoring methodology and task simulations out of our main repo so anyone can inspect, verify, and debate the standard—completely separate from our commercial platform.
 
-**If you're looking at a UAI score on an Uhallo audit report, this is the code that computed it.**
+**If you see a UAI score on an Uhallo report, this is the code that calculated it.**
 
-This project was built by [Axn Sadokpam](https://github.com/axnsadokpam), a blind founder, using Claude (Anthropic) as the implementation layer — a demonstration that AI can enable disabled developers to build complex accessibility infrastructure.
+This project was built by [Axn Sadokpam](https://github.com/axnsadokpam), a blind founder. He used Claude to help write the implementation—proving that LLMs can actually help disabled developers build serious infrastructure.
 
 ---
 
 ## Contributing
 
-Issues and PRs are welcome. The methodology is intentionally versioned (current: v4 Journey Engine). If you believe a task definition, pass condition, or scoring weight should change, open an issue with your reasoning and supporting evidence. Breaking changes require a version bump and updated methodology docs.
+Issues and PRs are welcome. The methodology is intentionally versioned (we're currently on the v4 Journey Engine). If you think a task definition, pass condition, or weight is wrong, open an issue and tell us why. Breaking changes require a version bump and updated docs.
 
 ---
 
