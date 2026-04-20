@@ -1,11 +1,11 @@
 {
-  "name": "uhallo-accessibility-index",
-  "version": "1.0.0",
+  "name": "@uhallo/accessibility-index",
+  "version": "1.0.1",
   "description": "Task-based web accessibility measurement engine powering the Uhallo UAI score.",
   "type": "module",
   "main": "src/index.js",
   "bin": {
-    "uhallo-accessibility-index": "./bin/cli.js"
+    "uhallo-accessibility-index": "bin/cli.js"
   },
   "scripts": {
     "start": "node ./bin/cli.js",

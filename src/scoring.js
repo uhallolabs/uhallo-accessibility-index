@@ -1,4 +1,4 @@
-﻿/**
+/**
  * UAI Scoring Algorithm — v4 Journey Engine
  *
  * This file contains computeJourneyScore() and collectFailedSCs().
@@ -108,6 +108,24 @@ export function computeJourneyScore(pageResults) {
         weakest_link_triggered: weakestLinkTriggered,
         scoring_version: 'v4',
     };
+}
+
+/**
+ * Collect all failed WCAG SCs from task results for a page.
+ * Returns a Set of SC strings like '2.1.1', '3.3.1'.
+ */
+export function collectFailedSCs(pageTaskResult) {
+    const failed = new Set();
+    const passed = new Set();
+    for (const t of (pageTaskResult.tasks || [])) {
+        if (t.status === 'fail' || t.status === 'partial') {
+            (t.wcag_sc || []).forEach(sc => failed.add(sc));
+        } else if (t.status === 'pass') {
+            (t.wcag_sc || []).forEach(sc => passed.add(sc));
+        }
+    }
+    // A SC is failed if it failed on this page (even if it passed elsewhere — per page)
+    return { failed, passed };
 }
 
 export function deriveLegacyPillarScores(journeyScore) {

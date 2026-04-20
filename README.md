@@ -2,7 +2,7 @@
 
 **Open methodology for task-based web accessibility measurement.**
 
-[![npm version](https://badge.fury.io/js/uhallo-accessibility-index.svg)](https://badge.fury.io/js/uhallo-accessibility-index)
+[![npm version](https://badge.fury.io/js/@uhallo%2Faccessibility-index.svg)](https://badge.fury.io/js/@uhallo%2Faccessibility-index)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/uhallolabs/uhallo-accessibility-index.svg?style=social&label=Star)](https://github.com/uhallolabs/uhallo-accessibility-index)
 [![WCAG](https://img.shields.io/badge/standard-WCAG%202.1%20AA-green.svg)](https://www.w3.org/WAI/WCAG21/quickref/)
@@ -13,7 +13,7 @@
 You can run the UAI across any public URL instantly using `npx`:
 
 ```bash
-npx uhallo-accessibility-index https://example.com
+npx @uhallo/accessibility-index https://example.com
 ```
 
 This will launch a headless Chromium browser, simulate the 8 accessibility tasks, and print a color-coded structural breakdown directly to your terminal.
@@ -34,11 +34,11 @@ Task Breakdown:
 You can import the core Engine directly into your Node.js testing suites (Jest, Vitest, Playwright Test).
 
 ```bash
-npm install uhallo-accessibility-index playwright @axe-core/playwright
+npm install @uhallo/accessibility-index playwright @axe-core/playwright
 ```
 
 ```javascript
-import { scan } from 'uhallo-accessibility-index';
+import { scan } from '@uhallo/accessibility-index';
 
 // Pass your own configured Playwright page (e.g. for authenticated sessions)
 const { score } = await scan('https://example.com/dashboard', 'conversion', playwrightPage);
@@ -139,7 +139,7 @@ Each task maps to WCAG 2.1 AA Success Criteria that are legally required under:
 ## Repository Structure
 
 ```
-uhallo-accessibility-index/
+@uhallo/accessibility-index/
 ├── src/
 │   ├── task-runner.js        # Orchestrator: runs tasks for a page, computes page score
 │   ├── scoring.js            # computeJourneyScore() — final UAI and compliance
