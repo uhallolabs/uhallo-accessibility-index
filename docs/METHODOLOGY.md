@@ -1,6 +1,6 @@
-# UAI Scoring Methodology — Version 4 (Journey Engine)
+# UAI Scoring Methodology — Version 1 (Journey Engine)
 
-**UAI v4 measures accessibility as task completion — not rule counts.**
+**UAI v1 measures accessibility as task completion — not rule counts.**
 
 We simulate real user journeys across three role-typed pages and ask: can a keyboard or screen reader user actually complete the thing this page exists for?
 
@@ -10,7 +10,7 @@ We simulate real user journeys across three role-typed pages and ask: can a keyb
 
 ## Version History
 
-**UAI v4 (Journey Engine)** — April 2026 *(current)*
+**UAI v1 (Journey Engine)** — April 2026 *(current)*
 - Replaced pillar-based scoring with 8 task-based journey simulations
 - Real keyboard traversal (T1): Tab up to 200 times, live trap detection
 - Real form error simulation (T3): submit empty, check aria-invalid + live region
@@ -222,7 +222,7 @@ compliance = passed_SC_count / total_tested_SC_count × 100
 
 A SC is "passed" only if it passed on every page where it was tested. Not per-page averaging.
 
-> **Why this matters:** Previous versions derived compliance as `UAI × 0.65`. That is arithmetic, not measurement. The v4 compliance score is a distinct number with its own source of truth. A site can have a UAI of 55 and 30% compliance or 55% compliance depending on which specific SCs it passed.
+> **Why this matters:** Previous versions derived compliance as `UAI × 0.65`. That is arithmetic, not measurement. The v1 compliance score is a distinct number with its own source of truth. A site can have a UAI of 55 and 30% compliance or 55% compliance depending on which specific SCs it passed.
 
 ---
 

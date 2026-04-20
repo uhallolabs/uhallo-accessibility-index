@@ -1,4 +1,4 @@
-# Scanner v4 — Task-Based Audit Plan
+# Scanner v1 — Task-Based Audit Plan
 
 **Goal:** Replace rule-based pillar scoring with task-based journey simulation. Remove snapshot 60-cap. Make UAI defensible under scrutiny.
 

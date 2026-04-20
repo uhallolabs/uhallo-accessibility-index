@@ -207,7 +207,7 @@ This project was built by [Axn Sadokpam](https://github.com/axnsadokpam), a blin
 
 ## Contributing
 
-Issues and PRs are welcome. The methodology is intentionally versioned (we're currently on the v4 Journey Engine). If you think a task definition, pass condition, or weight is wrong, open an issue and tell us why. Breaking changes require a version bump and updated docs.
+Issues and PRs are welcome. The methodology is intentionally versioned (we're currently on the v1 Journey Engine). If you think a task definition, pass condition, or weight is wrong, open an issue and tell us why. Breaking changes require a version bump and updated docs.
 
 ---
 

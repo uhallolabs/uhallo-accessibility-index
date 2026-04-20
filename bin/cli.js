@@ -62,7 +62,7 @@ async function runCLI() {
 
         const { score, pageResult } = result;
 
-        console.log(`${c.bold}UAI v4 Journey Score:${c.reset} ${score.uai_score >= 80 ? c.green : score.uai_score >= 60 ? c.yellow : c.red}${score.uai_score}/100${c.reset}`);
+        console.log(`${c.bold}UAI v1 Journey Score:${c.reset} ${score.uai_score >= 80 ? c.green : score.uai_score >= 60 ? c.yellow : c.red}${score.uai_score}/100${c.reset}`);
         console.log(`${c.bold}SC Pass Rate:${c.reset} ${score.estimated_compliance}% (${score.compliance_detail.total_tested} tested)\n`);
 
         console.log(`${c.bold}Task Breakdown:${c.reset}`);

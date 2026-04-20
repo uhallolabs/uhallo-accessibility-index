@@ -1,5 +1,5 @@
 /**
- * Uhallo Task Runner — Scanner v4
+ * Uhallo Task Runner — Scanner v1
  *
  * Runs the appropriate simulation tasks for a given page type.
  * Returns structured task results for the journey scoring module.

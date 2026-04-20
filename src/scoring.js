@@ -1,5 +1,5 @@
 /**
- * UAI Scoring Algorithm — v4 Journey Engine
+ * UAI Scoring Algorithm — v1 Journey Engine
  */
 const PAGE_WEIGHTS = { home: 0.30, conversion: 0.40, form: 0.30 };
 const HIGH_WEIGHT_TASKS = new Set(['t1', 't3', 't4']);
@@ -91,7 +91,7 @@ export function computeJourneyScore(pageResults) {
         page_breakdown: pageBreakdown,
         task_summary: taskSummary,
         weakest_link_triggered: weakestLinkTriggered,
-        scoring_version: 'v4',
+        scoring_version: 'v1',
     };
 }
 
@@ -136,7 +136,7 @@ function _nullScore(reason) {
         uai_score: 0, estimated_compliance: 0,
         compliance_detail: { passed_scs: [], failed_scs: [], pass_rate: 0, total_tested: 0 },
         page_breakdown: [], task_summary: [], weakest_link_triggered: false,
-        scoring_version: 'v4', error: reason,
+        scoring_version: 'v1', error: reason,
     };
 }
 
